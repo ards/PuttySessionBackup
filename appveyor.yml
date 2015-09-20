@@ -1,0 +1,9 @@
+version: 1.0.{build}
+configuration: Release
+build:
+  verbosity: minimal
+deploy:
+- provider: GitHub
+  auth_token:
+    secure: TPlXMhslrtyd6OCCszlzELzf3dxDp56HTVxvirzDYoD6AyY25tqEAqVMCogu33Vq
+  artifact: PuttySessionBackup.exe

@@ -35,7 +35,7 @@ namespace PuttySessionBackup
                 {
                     foreach (var sessionName in sessionNames)
                     {
-                        checkedListBox1.Items.Add(sessionName);
+                        puttySessionList.Items.Add(sessionName);
                     }
                 }
 
@@ -47,17 +47,15 @@ namespace PuttySessionBackup
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void backupSessions_Click(object sender, EventArgs e)
         {
             try
             {
-                if (checkedListBox1.CheckedItems.Count > 0)
+                if (puttySessionList.CheckedItems.Count > 0)
                 {
-                    
                     var result = saveFileDialog1.ShowDialog();
-                    
-
-
+                    saveFileDialog1.AddExtension = true;
+                    saveFileDialog1.DefaultExt = "reg";
                     if (string.IsNullOrEmpty(saveFileDialog1.FileName))
                         throw new ArgumentNullException("Target file path not set!");
 
@@ -84,7 +82,7 @@ namespace PuttySessionBackup
                     }
                 }else
                 {
-                    throw new NotImplementedException();
+                    throw new ApplicationException("Session not selected! At least one session must be selected from the list!");
                 }
             }
             catch(Exception ex)
@@ -93,30 +91,34 @@ namespace PuttySessionBackup
             }
         }
 
-        
-
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if(AllSessionsSelected.Checked)
             {
                 //Disable checking
-                checkedListBox1.Enabled = false;
+                puttySessionList.Enabled = false;
 
                 //Select all items
-                for (int itemIndex = 0; itemIndex < checkedListBox1.Items.Count; itemIndex++)
+                for (int itemIndex = 0; itemIndex < puttySessionList.Items.Count; itemIndex++)
                 {
-                    checkedListBox1.SetItemChecked(itemIndex, true);
+                    puttySessionList.SetItemChecked(itemIndex, true);
                 }
             }
             else
             {
-                checkedListBox1.Enabled = true;
+                puttySessionList.Enabled = true;
 
-                for (int itemIndex = 0; itemIndex < checkedListBox1.Items.Count; itemIndex++)
+                for (int itemIndex = 0; itemIndex < puttySessionList.Items.Count; itemIndex++)
                 {
-                    checkedListBox1.SetItemChecked(itemIndex, false);
+                    puttySessionList.SetItemChecked(itemIndex, false);
                 }
             }
+        }
+
+        private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AboutBox aboutWindow = new AboutBox();
+            aboutWindow.Show();
         }
     }
 }
