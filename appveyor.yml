@@ -3,7 +3,6 @@ skip_tags: true
 image:
 - Ubuntu
 - Visual Studio 2019
-- Ubuntu2004
 configuration: Release
 assembly_info:
   patch: true
@@ -21,6 +20,7 @@ dotnet_csproj:
   file_version: '{version}'
   informational_version: '{version}'
 build:
+  project: PuttySessionBackup.sln
   publish_aspnet_core: true
   parallel: true
   verbosity: normal
