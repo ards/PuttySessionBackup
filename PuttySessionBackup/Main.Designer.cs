@@ -49,9 +49,10 @@
             // 
             // backupSessions
             // 
-            this.backupSessions.Location = new System.Drawing.Point(183, 19);
+            this.backupSessions.Location = new System.Drawing.Point(214, 22);
+            this.backupSessions.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.backupSessions.Name = "backupSessions";
-            this.backupSessions.Size = new System.Drawing.Size(120, 23);
+            this.backupSessions.Size = new System.Drawing.Size(140, 27);
             this.backupSessions.TabIndex = 0;
             this.backupSessions.Text = "Backup";
             this.backupSessions.UseVisualStyleBackColor = true;
@@ -63,43 +64,46 @@
             this.toolStripStatusLabel1,
             this.toolStripStatusLabel2,
             this.toolStripProgressBar1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 220);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 329);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(333, 22);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(486, 24);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(42, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(42, 19);
             this.toolStripStatusLabel1.Text = "Status:";
             // 
             // toolStripStatusLabel2
             // 
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(0, 17);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(0, 19);
             // 
             // toolStripProgressBar1
             // 
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 16);
+            this.toolStripProgressBar1.Size = new System.Drawing.Size(117, 18);
             this.toolStripProgressBar1.Step = 1;
             // 
             // puttySessionList
             // 
             this.puttySessionList.FormattingEnabled = true;
-            this.puttySessionList.Location = new System.Drawing.Point(6, 19);
+            this.puttySessionList.Location = new System.Drawing.Point(7, 22);
+            this.puttySessionList.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.puttySessionList.Name = "puttySessionList";
-            this.puttySessionList.Size = new System.Drawing.Size(171, 124);
+            this.puttySessionList.Size = new System.Drawing.Size(199, 130);
             this.puttySessionList.TabIndex = 3;
             // 
             // AllSessionsSelected
             // 
             this.AllSessionsSelected.AutoSize = true;
-            this.AllSessionsSelected.Location = new System.Drawing.Point(6, 149);
+            this.AllSessionsSelected.Location = new System.Drawing.Point(7, 172);
+            this.AllSessionsSelected.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.AllSessionsSelected.Name = "AllSessionsSelected";
-            this.AllSessionsSelected.Size = new System.Drawing.Size(112, 17);
+            this.AllSessionsSelected.Size = new System.Drawing.Size(118, 19);
             this.AllSessionsSelected.TabIndex = 4;
             this.AllSessionsSelected.Text = "Select all sessions";
             this.AllSessionsSelected.UseVisualStyleBackColor = true;
@@ -107,12 +111,15 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.AutoSize = true;
             this.groupBox1.Controls.Add(this.puttySessionList);
             this.groupBox1.Controls.Add(this.AllSessionsSelected);
             this.groupBox1.Controls.Add(this.backupSessions);
-            this.groupBox1.Location = new System.Drawing.Point(12, 27);
+            this.groupBox1.Location = new System.Drawing.Point(14, 31);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(309, 190);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox1.Size = new System.Drawing.Size(362, 219);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sessions:";
@@ -128,7 +135,8 @@
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(333, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(486, 24);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -143,20 +151,21 @@
             // aboutToolStripMenuItem1
             // 
             this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
-            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem1.Text = "About";
             this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem1_Click);
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(333, 242);
+            this.ClientSize = new System.Drawing.Size(486, 353);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Main";
             this.Text = "Putty session backup";
             this.statusStrip1.ResumeLayout(false);
